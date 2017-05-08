@@ -5,7 +5,7 @@ networks:
     
 services: 
   app: 
-    image: YOUR_DOCKER_ID/IMAGE_NAME:TAG
+    image: schoolofdevops/tomcatapp:latest
     ports: 
       - 7000:8080
     networks: 
