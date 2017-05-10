@@ -13,4 +13,4 @@ ADD src/main /code/src/main
 RUN ["mvn", "package"]
 RUN chmod a+rwx target/cmad-advanced-staging-demo-fat.jar
 
-CMD ["java", "-jar", "/code/target/cmad-advanced-staging-demo-fat.jar -cluster"]
+CMD ["java", "-jar", "target/cmad-advanced-staging-demo-fat.jar"]
