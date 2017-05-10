@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Glarimy Library</title>
+<script src="jquery-2.1.3.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn").bind("click", function() {
+			$.get("/library/book/" + $("#isbn").val(), function(book) {
+				$("#title").html(book.title)
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>Glarimy Library</h1>
+	<hr />
+	Find Book:
+	<input id='isbn' placeholder="ISBN">
+	<button id="btn">Go!</button>
+	<span id='title'></span>
+</body>
+</html>

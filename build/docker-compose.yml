@@ -5,9 +5,15 @@ networks:
     
 services: 
   app: 
-    image: <YOUR_DOCKER_ID/IMAGE_NAME:TAG>
+    image: dialectpython/vertx:latest
     ports: 
       - 7000:8080
     networks: 
       - nw01
+    depends_on:
+      - mongo
 
+  mongo:
+    image: mongo:latest
+    networks:
+      - nw01
