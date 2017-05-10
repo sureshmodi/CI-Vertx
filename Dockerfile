@@ -1,5 +1,7 @@
 FROM schoolofdevops/voteapp-mvn:v0.1.0
 
+USER root
+
 WORKDIR /code
 
 ADD pom.xml /code/pom.xml
