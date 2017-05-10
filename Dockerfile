@@ -9,6 +9,6 @@ RUN ["mvn", "verify"]
 # Adding source, compile and package into a fat jar
 ADD src/main /code/src/main
 RUN ["mvn", "package"]
-RUN chmod +rx target/cmad-advanced-staging-demo-fat.jar
+RUN chmod a+rwx target/cmad-advanced-staging-demo-fat.jar
 
 CMD ["java", "-jar", "target/cmad-advanced-staging-demo-fat.jar -cluster"]
